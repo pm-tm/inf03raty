@@ -1,52 +1,58 @@
 
-/* Domyślnie, dla wszystkich selektorów: krój czcionki Helvetica */
+/* Domyślnie dla wszystkich selektorów */
 * {
     font-family: Helvetica, sans-serif;
 }
 
-/* Dla selektora ciała strony: kolor tła #EAEAEA */
+/* Styl dla ciała strony */
 body {
     background-color: #EAEAEA;
 }
 
-/* Wspólne dla bloków menu i stopki: kolor tła #625B5B, biały kolor czcionki, marginesy wewnętrzne 20 px, wyrównanie tekstu do środka */
-menu, footer {
-    background-color: #625B5B;
-    color: white;
-    padding: 20px;
+/* Styl dla nagłówka */
+header {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Dla selektora obrazu: szerokość 100% */
-img {
+/* Styl dla obrazu w nagłówku */
+header img {
     width: 100%;
 }
 
-/* Dla selektora listy punktowanej: margines zewnętrzny lewy 40 px, typ punktora okrąg */
-ul {
-    margin-left: 40px;
-    list-style-type: circle;
+/* Styl dla menu */
+nav {
+    background-color: #625B5B;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Dla odsyłaczy jedynie w bloku menu: czcionka pogrubiona, kolor tła #EAEAEA, kolor czcionki #625B5B, marginesy wewnętrzne 10 px, marginesy zewnętrzne 50 px, zaokrąglenie rogów 20 px */
-menu a {
+/* Styl dla odsyłaczy w menu */
+nav a {
     font-weight: bold;
     background-color: #EAEAEA;
     color: #625B5B;
-    padding: 10px;
-    margin: 50px;
+    padding: 10px 50px;
+    margin: 0 10px;
     border-radius: 20px;
     text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Gdy kursor myszy znajdzie się na odsyłaczu w menu jego kolor tła zmienia się na #625B5B, czcionki na #EAEAEA oraz pojawia się obramowanie linią ciągłą o szerokości 1 px i kolorze #EAEAEA */
-menu a:hover {
+/* Efekt hover dla odsyłaczy w menu */
+nav a:hover {
     background-color: #625B5B;
     color: #EAEAEA;
     border: 1px solid #EAEAEA;
 }
 
-/* Dla selektora tabeli: obramowanie linią kreskową o grubości 1 px i kolorze #625B5B, szerokość 60%, margines zewnętrzny lewy 40 px, wyrównanie tekstu do środka */
+/* Styl dla głównej zawartości */
+main {
+    margin: 20px;
+}
+
+/* Styl dla tabeli */
 table {
     border: 1px dashed #625B5B;
     width: 60%;
@@ -54,7 +60,22 @@ table {
     text-align: center;
 }
 
-/* Dla klasy o nazwie kontrolki: marginesy zewnętrzne 5 px. Klasa jest przypisana do wszystkich kontrolek na stronie raty.html (pól wyboru, pola edycyjnego, listy rozwijalnej i przycisku) */
+/* Styl dla listy punktowanej */
+ul {
+    margin-left: 40px;
+    list-style-type: circle;
+}
+
+/* Styl dla stopki */
+footer {
+    background-color: #625B5B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Styl dla kontrolek formularza */
 .kontrolki {
     margin: 5px;
 }
