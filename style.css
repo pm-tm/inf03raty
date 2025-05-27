@@ -1,0 +1,60 @@
+
+/* Domyślnie, dla wszystkich selektorów: krój czcionki Helvetica */
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+/* Dla selektora ciała strony: kolor tła #EAEAEA */
+body {
+    background-color: #EAEAEA;
+}
+
+/* Wspólne dla bloków menu i stopki: kolor tła #625B5B, biały kolor czcionki, marginesy wewnętrzne 20 px, wyrównanie tekstu do środka */
+menu, footer {
+    background-color: #625B5B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Dla selektora obrazu: szerokość 100% */
+img {
+    width: 100%;
+}
+
+/* Dla selektora listy punktowanej: margines zewnętrzny lewy 40 px, typ punktora okrąg */
+ul {
+    margin-left: 40px;
+    list-style-type: circle;
+}
+
+/* Dla odsyłaczy jedynie w bloku menu: czcionka pogrubiona, kolor tła #EAEAEA, kolor czcionki #625B5B, marginesy wewnętrzne 10 px, marginesy zewnętrzne 50 px, zaokrąglenie rogów 20 px */
+menu a {
+    font-weight: bold;
+    background-color: #EAEAEA;
+    color: #625B5B;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Gdy kursor myszy znajdzie się na odsyłaczu w menu jego kolor tła zmienia się na #625B5B, czcionki na #EAEAEA oraz pojawia się obramowanie linią ciągłą o szerokości 1 px i kolorze #EAEAEA */
+menu a:hover {
+    background-color: #625B5B;
+    color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+}
+
+/* Dla selektora tabeli: obramowanie linią kreskową o grubości 1 px i kolorze #625B5B, szerokość 60%, margines zewnętrzny lewy 40 px, wyrównanie tekstu do środka */
+table {
+    border: 1px dashed #625B5B;
+    width: 60%;
+    margin-left: 40px;
+    text-align: center;
+}
+
+/* Dla klasy o nazwie kontrolki: marginesy zewnętrzne 5 px. Klasa jest przypisana do wszystkich kontrolek na stronie raty.html (pól wyboru, pola edycyjnego, listy rozwijalnej i przycisku) */
+.kontrolki {
+    margin: 5px;
+}

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy komputerowe</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #EAEAEA;
+        }
+        header, footer {
+            background-color: #625B5B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .kontrolki {
+            margin: 5px;
+        }
+        #wynik {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="baner.png" alt="kursy komputerowe" style="width: 100%;">
+    </header>
+    <main>
+        <h3>Oblicz miesięczną ratę</h3>
+        <input type="checkbox" id="react" class="kontrolki"> Kurs React.js<br>
+        <input type="checkbox" id="js" class="kontrolki"> Kurs JavaScript<br>
+        <label for="raty">Liczba rat:</label>
+        <input type="number" id="raty" class="kontrolki"><br>
+        <label for="miasto">Miasto:</label>
+        <select id="miasto" class="kontrolki">
+            <option>Warszawa</option>
+            <option>Katowice</option>
+            <option>Gdańsk</option>
+        </select><br>
+        <button onclick="obliczRate()" class="kontrolki">Oblicz</button>
+        <p id="wynik"></p>
+    </main>
+    <footer>
+        Autor strony: [numer zdającego]
+    </footer>
+    <script>
+        function obliczRate() {
+            // Pobranie wartości z formularza
+            const kursReact = document.getElementById("react").checked;
+            const kursJS = document.getElementById("js").checked;
+            const liczbaRat = parseInt(document.getElementById("raty").value);
+            const miasto = document.getElementById("miasto").value;
+
+            // Ceny kursów (przykładowe, bo nie podano w arkuszu)
+            let koszt = 0;
+            if (kursReact) koszt += 1200;
+            if (kursJS) koszt += 1000;
+
+            // Obliczenie raty
+            const rata = (koszt / liczbaRat).toFixed(2);
+
+            // Wyświetlenie wyniku
+            const wynik = `Kurs odbędzie się w ${miasto}. Koszt całkowity: ${koszt} zł. Płacisz ${liczbaRat} rat po ${rata} zł.`;
+            document.getElementById("wynik").innerHTML = wynik;
+        }
+    </script>
+</body>
+</html>
